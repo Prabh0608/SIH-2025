@@ -1,0 +1,56 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.hero {
+  text-align: center;
+  padding: 8rem 1.5rem;
+
+  h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: $gray-800;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    color: $gray-700;
+    font-size: 1.1rem;
+  }
+
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    a,
+    button {
+      padding: 0.8rem 1.5rem;
+      border-radius: 0.75rem;
+      font-size: 1rem;
+      cursor: pointer;
+      @include shadow(0.15);
+      transition: all 0.2s ease;
+    }
+
+    a {
+      background: $orange;
+      color: $white;
+
+      &:hover {
+        background: darken($orange, 8%);
+      }
+    }
+
+    button {
+      background: $white;
+      border: 1px solid $gray-100;
+
+      &:hover {
+        background: $gray-50;
+      }
+    }
+  }
+}

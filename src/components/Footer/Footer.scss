@@ -1,0 +1,23 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+footer {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: $white;
+  border-radius: 1.25rem;
+  @include shadow(0.05);
+
+  p {
+    color: $gray-600;
+
+    &:first-child {
+      font-size: 1.1rem;
+    }
+
+    &:last-child {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+    }
+  }
+}

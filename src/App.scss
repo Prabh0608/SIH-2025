@@ -1,0 +1,74 @@
+@import "./styles/variables";
+@import "./styles/mixins";
+
+/* Global Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom, $orange-light, $white, $green-light);
+  color: $gray-800;
+  line-height: 1.6;
+}
+
+/* Container — same as Tailwind's max-w-6xl */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
+  @include responsive {
+    padding: 0 1rem;
+  }
+}
+
+/* Section Spacing — matches Tailwind py-32, py-28, etc. */
+section {
+  margin-bottom: 4rem;
+  scroll-margin-top: 5rem; // to handle smooth scroll offset for navbar
+
+  @include responsive {
+    margin-bottom: 3rem;
+  }
+}
+
+/* Consistent rounded card feel */
+section,
+footer {
+  border-radius: 1.25rem;
+}
+
+/* Buttons — unify look across app */
+button,
+a.btn {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+/* Gradient background and text contrast fixes */
+main {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+/* Footer alignment fix */
+footer {
+  margin-top: 4rem;
+}
+
+/* Modal overlay global z-index control */
+.modal-overlay {
+  z-index: 1000;
+}

@@ -1,0 +1,86 @@
+.sim-page {
+    header {
+        background: #4CAF50;
+        color: white;
+        padding: 1.5rem;
+        text-align: center;
+        position: relative;
+
+        .back-btn {
+            position: absolute;
+            left: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #f97316;
+            color: white;
+            padding: 8px 14px;
+            border-radius: 6px;
+            text-decoration: none;
+
+            &:hover {
+                background: #ea580c;
+            }
+        }
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 30px auto;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+
+        .internship-list {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .card {
+                padding: 15px;
+                border-radius: 10px;
+                background: #fff7ed;
+                border: 1px solid #fcd34d;
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+
+                &.active {
+                    border: 2px solid #166534;
+                    background: #f0fdf4;
+                }
+            }
+        }
+
+        .bar-container {
+            margin-top: 12px;
+            background: #f3f4f6;
+            border-radius: 6px;
+            overflow: hidden;
+
+            .bar {
+                color: white;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 8px;
+
+                &.orange {
+                    background: #f97316;
+                }
+
+                &.green {
+                    background: #22c55e;
+                }
+
+                &.blue {
+                    background: #0ea5e9;
+                }
+            }
+        }
+    }
+}

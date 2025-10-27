@@ -1,0 +1,87 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .modal-content {
+        background: $white;
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        width: 100%;
+        max-width: 500px;
+        position: relative;
+        @include shadow(0.2);
+
+        .close-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: $gray-600;
+            cursor: pointer;
+
+            &:hover {
+                color: $gray-800;
+            }
+        }
+
+        h2 {
+            text-align: center;
+            color: $green;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+
+            input {
+                padding: 0.6rem 0.8rem;
+                border: 1px solid $gray-100;
+                border-radius: 0.5rem;
+            }
+
+            .form-actions {
+                display: flex;
+                gap: 0.5rem;
+
+                button {
+                    flex: 1;
+                    border: none;
+                    border-radius: 0.6rem;
+                    padding: 0.6rem 1rem;
+                    cursor: pointer;
+
+                    &.save {
+                        background: $green;
+                        color: $white;
+
+                        &:hover {
+                            background: darken($green, 8%);
+                        }
+                    }
+
+                    &.cancel {
+                        background: $white;
+                        border: 1px solid $gray-100;
+
+                        &:hover {
+                            background: $gray-50;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

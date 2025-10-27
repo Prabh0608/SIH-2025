@@ -1,0 +1,24 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+#about {
+    background: $orange-light;
+    text-align: center;
+    padding: 6rem 1.5rem;
+    border-radius: 1.25rem;
+    margin-bottom: 3rem;
+
+    h2 {
+        font-size: 2rem;
+        color: darken($orange, 10%);
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+
+    p {
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+        color: $gray-700;
+    }
+}
