@@ -10,7 +10,7 @@ import Footer from "./components/Footer/Footer";
 import Modal from "./components/Modal/Modal";
 
 import CareerQuiz from "./pages/CarrerQuiz/CarrerQuiz";
-// import CareerSimulation from "./pages/CareerSimulation/CareerSimulation";
+import CareerSimulation from "./pages/CarrerSimulation/CarrerSimulation";
 import PeerMatching from "./pages/PeerMatching/PeerMatching";
 import AIMentor from "./pages/AIMentor/AIMentor";
 import PolicyInsights from "./pages/PolicyInsights/PolicyInsights";
@@ -38,7 +38,7 @@ function App() {
             }
           />
           <Route path="/career-quiz" element={<CareerQuiz />} />
-          {/* <Route path="/career-simulation" element={<CareerSimulation />} /> */}
+          <Route path="/career-simulation" element={<CareerSimulation />} />
           <Route path="/peer-matching" element={<PeerMatching />} />
           <Route path="/ai-mentor" element={<AIMentor />} />
           <Route path="/policy-insights" element={<PolicyInsights />} />
